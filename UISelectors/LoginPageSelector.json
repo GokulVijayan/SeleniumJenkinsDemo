@@ -1,0 +1,7 @@
+{
+  "loader": "//*[@id='nprogress']/div[2]",
+  "loginButton": "//button[@class='app-c-btn app-c-btn--primary app-c-btn-lg btn btn-secondary']",
+  "password": "//input[@name='password']",
+  "username": "//input[@name='email']",
+  "verifyLogin": "//body[1]/div[1]/div[1]/div[1]/div[1]/div[3]/div[1]/div[2]/div[1]/div[1]/div[6]/div[1]/div[1]/div[1]/div[1]/table[1]/tbody[1]/tr[1]/td[1]"
+}
