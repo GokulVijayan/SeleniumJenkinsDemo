@@ -1,0 +1,689 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Ex-haft</name>
+    </assembly>
+    <members>
+        <member name="M:Ex_haft.Configuration.ConfigFile.GetAppConfig(System.String)">
+            <summary>
+            Returns configuration settings
+            </summary>
+            <returns>Configuration</returns>
+        </member>
+        <member name="M:Ex_haft.Configuration.ConfigFile.Init(System.String)">
+            <summary>
+            Initialize webdriver for the browser specified in appSettings and navigate to the URL specified in appSettings 
+            </summary>
+            <returns>driver - Initialized webdriver</returns>
+        </member>
+        <member name="M:Ex_haft.Configuration.ConfigFile.RetrieveInputTestData(System.String)">
+            <summary>
+            To retrieve testdata array input in json array format for the input file specified
+            </summary>
+            <param name="fileName">Input testdata file name</param>
+        </member>
+        <member name="M:Ex_haft.Configuration.ConfigFile.GetAbsoluteFilePath(System.String)">
+            <summary>
+            Retreieve absolute path of the file or directory 
+            </summary>
+            <param name="fileOrDirectoryName">Input file name or directory name</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ex_haft.Configuration.ConfigFile.RetrieveAPITestData(System.String,System.String)">
+            <summary>
+            Retrieve input testdata to identify hotspot
+            </summary>
+            <param name="fileName">name of testdata file</param>
+            <param name="keyName">json key name for testdata</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ex_haft.Configuration.ConfigFile.GetReportFile(System.String)">
+            <summary>
+            Returns Test Report Steps
+            </summary>
+            <param name="reportFileName"></param>
+            <returns>TestReportSteps</returns>
+        </member>
+        <member name="M:Ex_haft.Configuration.ConfigFile.RetrieveUIMap(System.String)">
+            <summary>
+            Returns UiMap object
+            </summary>
+            <param name="fileName"></param>
+            <returns>JObject</returns>
+        </member>
+        <member name="M:Ex_haft.Configuration.ConfigFile.RetrieveTestScripts(System.String)">
+            <summary>
+            Returns testscripts
+            </summary>
+            <param name="fileName"></param>
+            <returns>string</returns>
+        </member>
+        <member name="M:Ex_haft.Configuration.ConfigFile.RetrieveProperty(System.String)">
+            <summary>
+            To retrieve uiSelector input in json object format for the input file specified
+            </summary>
+            <param name="fileName">Input testdata file name</param>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:Ex_haft.Configuration.ConfigFile.RetrieveAPIAddCrashInputTestData(System.String)" -->
+        <member name="M:Ex_haft.Configuration.ConfigFile.RetrieveQueryBuilderTestData(System.String)">
+            <summary>
+            Retrieve testdata to configure fields in query builder screen
+            </summary>
+            <param name="fileName"></param>
+            <returns></returns>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:Ex_haft.Configuration.ConfigFile.RetrievePlotCrashesTestData(System.String)" -->
+        <!-- Badly formed XML comment ignored for member "M:Ex_haft.Configuration.ConfigFile.RetrieveSafetyCameraTestData(System.String)" -->
+        <!-- Badly formed XML comment ignored for member "M:Ex_haft.Configuration.ConfigFile.RetrieveDeleteCrashTestData(System.String)" -->
+        <!-- Badly formed XML comment ignored for member "M:Ex_haft.Configuration.ConfigFile.RetrieveCalculateCrashCostTestData(System.String)" -->
+        <!-- Badly formed XML comment ignored for member "M:Ex_haft.Configuration.ConfigFile.RetrieveCbaTestData(System.String)" -->
+        <!-- Badly formed XML comment ignored for member "M:Ex_haft.Configuration.ConfigFile.RetrieveCMCostTestData(System.String)" -->
+        <!-- Badly formed XML comment ignored for member "M:Ex_haft.Configuration.ConfigFile.RetrieveRunCbaTestData(System.String)" -->
+        <!-- Badly formed XML comment ignored for member "M:Ex_haft.Configuration.ConfigFile.RetriveExportStatusData(System.String)" -->
+        <!-- Badly formed XML comment ignored for member "M:Ex_haft.Configuration.ConfigFile.RetriveUserData(System.String)" -->
+        <member name="M:Ex_haft.GenericComponents.CheckTestFailure.CheckReportForFailure(System.Collections.Generic.List{Ex_haft.Utilities.Reports.TestReportSteps},System.Int32)">
+            <summary>
+            Test for failure condition in the report parameter passed and update value
+            of static variable testCheck if failed  else return actual value of testCheck
+            </summary>
+            <param name="report"></param>
+            <param name="testCheck"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Ex_haft.GenericComponents.ReusableComponents.Click(OpenQA.Selenium.IWebDriver,System.String,System.String)">
+            <summary>
+            Click the element specified
+            </summary>
+            <param name="driver"></param>
+            <param name="by"></param>
+            <param name="selector"></param>
+        </member>
+        <member name="M:Ex_haft.GenericComponents.ReusableComponents.GenerateReportSteps(System.String,System.String,System.String,System.Int32)">
+            <summary>
+            Generate Dynamic Report
+            </summary>
+            <param name="actionItemValue"></param>
+            <param name="message"></param>
+            <param name="testObjective"></param>
+            <param name="stepCount"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Ex_haft.GenericComponents.ReusableComponents.GetRowsInTable(OpenQA.Selenium.IWebDriver,System.String)">
+            <summary>
+            Get the no. of rows in the table
+            </summary>
+            <param name="driver"></param>
+            <param name="by"></param>
+            <param name="selector"></param>
+        </member>
+        <member name="M:Ex_haft.GenericComponents.ReusableComponents.JEClick(OpenQA.Selenium.IWebDriver,System.String,System.String)">
+            <summary>
+            Click the element specified using javascript executor
+            </summary>
+            <param name="driver"></param>
+            <param name="by"></param>
+            <param name="selector"></param>
+        </member>
+        <member name="M:Ex_haft.GenericComponents.ReusableComponents.SendKeys(OpenQA.Selenium.IWebDriver,System.String,System.String,System.String)">
+            <summary>
+            Find the element specified and send specified input testdata
+            </summary>
+            <param name="driver"></param>
+            <param name="by"></param>
+            <param name="selector"></param>
+            <param name="testData"></param>
+        </member>
+        <member name="M:Ex_haft.GenericComponents.ReusableComponents.Clear(OpenQA.Selenium.IWebDriver,System.String,System.String)">
+            <summary>
+            Find the element using selector specified and clear the content 
+            </summary>
+            <param name="driver"></param>
+            <param name="by"></param>
+            <param name="selector"></param>
+        </member>
+        <member name="M:Ex_haft.GenericComponents.ReusableComponents.WaitUntilElementVisible(OpenQA.Selenium.IWebDriver,System.String,System.String)">
+            <summary>
+            Wait until element visible
+            </summary>
+            <param name="driver"></param>
+            <param name="by"></param>
+            <param name="selector"></param>
+        </member>
+        <member name="M:Ex_haft.GenericComponents.ReusableComponents.WaitUntilElementInvisible(OpenQA.Selenium.IWebDriver,System.String,System.String)">
+            <summary>
+            Wait until element invisible
+            </summary>
+            <param name="driver"></param>
+            <param name="by"></param>
+            <param name="selector"></param>
+        </member>
+        <member name="M:Ex_haft.GenericComponents.ReusableComponents.CompareText(System.String,System.String)">
+            <summary>
+            Compare two input strings
+            </summary>
+            <param name="firstText"></param>
+            <param name="secondText"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Ex_haft.GenericComponents.ReusableComponents.ContainsText(System.String,System.String)">
+            <summary>
+            Check if first input text contains second input text specified
+            </summary>
+            <param name="firstText"></param>
+            <param name="secondtext"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Ex_haft.GenericComponents.ReusableComponents.MoveToElement(OpenQA.Selenium.IWebDriver,OpenQA.Selenium.IWebElement)">
+            <summary>
+            Move to an element not visible in the screen
+            </summary>
+            <param name="driver"></param>
+            <param name="element"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Ex_haft.GenericComponents.ReusableComponents.RetrieveText(OpenQA.Selenium.IWebDriver,System.String,System.String)">
+            <summary>
+            Retrieve text from the selector specified
+            </summary>
+            <param name="driver"></param>
+            <param name="by"></param>
+            <param name="selector"></param>
+            <returns>Text retrieved from selector</returns>
+        </member>
+        <member name="M:Ex_haft.GenericComponents.ReusableComponents.RetrieveAndCompareText(OpenQA.Selenium.IWebDriver,System.String,System.String,System.String)">
+            <summary>
+            Retrieve text from selector specified and compare with the inputText
+            </summary>
+            <param name="driver"></param>
+            <param name="By"></param>
+            <param name="selector"></param>
+            <param name="inputText"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Ex_haft.GenericComponents.ReusableComponents.ElementsCount(OpenQA.Selenium.IWebDriver,System.String,System.String)">
+            <summary>
+            Returns the element count inside an list
+            </summary>
+            <param name="driver"></param>
+            <param name="by"></param>
+            <param name="selector"></param>
+            <returns>Element Count</returns>
+        </member>
+        <member name="M:Ex_haft.GenericComponents.ReusableComponents.FindElement(OpenQA.Selenium.IWebDriver,System.String,System.String)">
+            <summary>
+            Find element by the selector specified and return element
+            </summary>
+            <param name="driver"></param>
+            <param name="by"></param>
+            <param name="selector"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Ex_haft.GenericComponents.ReusableComponents.FindElements(OpenQA.Selenium.IWebDriver,System.String,System.String)">
+            <summary>
+            Find list of elements by the selector specified and return element
+            </summary>
+            <param name="driver"></param>
+            <param name="by"></param>
+            <param name="selector"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Ex_haft.GenericComponents.ReusableComponents.SelectDateFromCalender(OpenQA.Selenium.IWebDriver,System.String,System.String,System.String)">
+            <summary>
+            Open calender using the selector specified and select date based on the inputDate on format - d-MMM-yyyy
+            </summary>
+            <param name="by"></param>
+            <param name="calenderToggleButtonSelector"></param>
+            <param name="driver"></param>
+            <param name="dateToSelect"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Ex_haft.GenericComponents.ReusableComponents.DateSelector(OpenQA.Selenium.IWebDriver,System.String[])">
+            <summary>
+            Select day from calender picker
+            </summary>
+            <param name="driver"></param>
+            <param name="inputDate"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Ex_haft.GenericComponents.ReusableComponents.MonthSelector(OpenQA.Selenium.IWebDriver,System.String[])">
+            <summary>
+            Select month from calender picker
+            </summary>
+            <param name="driver"></param>
+            <param name="inputDate"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Ex_haft.GenericComponents.ReusableComponents.YearSelector(OpenQA.Selenium.IWebDriver,System.String[])">
+            <summary>
+            Select year from calender picker
+            </summary>
+            <param name="driver"></param>
+            <param name="inputDate"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Ex_haft.GenericComponents.ReusableComponents.ScrollToElement(OpenQA.Selenium.IWebDriver,System.String,System.String)">
+            <summary>
+            Scroll to element specified using selector
+            </summary>
+            <param name="driver"></param>
+            <param name="by"></param>
+            <param name="selector"></param>
+        </member>
+        <member name="M:Ex_haft.GenericComponents.ReusableComponents.SelectFromDropdown(OpenQA.Selenium.IWebDriver,System.String,System.String,System.String)">
+            <summary>
+            Open dropdown using selector specified and select the inputText specified
+            </summary>
+            <param name="driver"></param>
+            <param name="by"></param>
+            <param name="downArrowSelector"></param>
+            <param name="inputText"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Ex_haft.GenericComponents.ReusableComponents.SelectFromSelectDropdown(OpenQA.Selenium.IWebDriver,System.String,System.String,System.String)">
+            <summary>
+            Open dropdown using selector specified and select the inputText specified
+            </summary>
+            <param name="driver"></param>
+            <param name="by"></param>
+            <param name="downArrowSelector"></param>
+            <param name="inputText"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Ex_haft.GenericComponents.ReusableComponents.SelectFromUserAccountDropdown(OpenQA.Selenium.IWebDriver,System.String,System.String,System.String)">
+            <summary>
+            Open dropdown using selector specified and select the inputText specified
+            </summary>
+            <param name="driver"></param>
+            <param name="by"></param>
+            <param name="downArrowSelector"></param>
+            <param name="inputText"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Ex_haft.GenericComponents.ReusableComponents.getRandomNumber(System.Int32)">
+            <summary>
+            Generates random Number
+            </summary>
+            <param name="count"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Ex_haft.GenericComponents.ReusableComponents.ClickQueryBuilderType(OpenQA.Selenium.IWebDriver,System.String,System.String)">
+            <summary>
+            Click the element specified by name
+            </summary>
+            <param name="driver"></param>
+            <param name="by"></param>
+            <param name="name"></param>
+        </member>
+        <member name="M:Ex_haft.GenericComponents.ReusableComponents.SelectFromQueryBuilderDropdown(OpenQA.Selenium.IWebDriver,System.String,System.String)">
+            <summary>
+            Open query builder dropdown using selector specified and select the inputText specified
+            </summary>
+            <param name="driver"></param>
+            <param name="by"></param>
+            <param name="inputText"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Ex_haft.GenericComponents.ReusableComponents.SelectFromSummaryPrintDropdown(OpenQA.Selenium.IWebDriver,System.String,System.String,System.String)">
+            <summary>
+            Open summary print dropdown using selector specified and select the inputText specified
+            </summary>
+            <param name="driver"></param>
+            <param name="by"></param>
+            <param name="selector"></param>
+            <param name="inputText"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Ex_haft.GenericComponents.ReusableComponents.MultiSelect(OpenQA.Selenium.IWebDriver,System.String,System.String,System.String)">
+            <summary>
+            Multi Select from dropdown
+            </summary>
+            <param name="driver"></param>
+            <param name="by"></param>
+            <param name="selector"></param>
+            <param name="inputText"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Ex_haft.GenericComponents.ReusableComponents.SelectUserAccount(OpenQA.Selenium.IWebDriver,System.String,System.String,System.String)">
+            <summary>
+            Multi Select from dropdown
+            </summary>
+            <param name="driver"></param>
+            <param name="by"></param>
+            <param name="selector"></param>
+            <param name="inputText"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Ex_haft.GenericComponents.ReusableComponents.DragAndDrop(OpenQA.Selenium.IWebDriver,System.String,System.String,System.String)">
+            <summary>
+            Drags an element from source location to destination location
+            </summary>
+            <param name="driver"></param>
+            <param name="by"></param>
+            <param name="sourceSelector"></param>
+            <param name="destinationSelector"></param>
+        </member>
+        <member name="M:Ex_haft.GenericComponents.ReusableComponents.SelectFromTemplatesDropdown(OpenQA.Selenium.IWebDriver,System.String,System.String,System.String)">
+            <summary>
+            Open template name using selector specified and select the inputText specified
+            </summary>
+            <param name="driver"></param>
+            <param name="by"></param>
+            <param name="downArrowSelector"></param>
+            <param name="inputText"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Ex_haft.GenericComponents.ReusableComponents.GetAbsoluteFilePath(System.String)">
+            <summary>
+            Retrieves Absolute Path of an File 
+            </summary>
+            <param name="fileOrDirectoryName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Ex_haft.GenericComponents.ReusableComponents.RetrieveUISelectors(System.String)">
+            <summary>
+            Retrieves ui selectors 
+            </summary>
+            <param name="fileName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Ex_haft.GenericComponents.ReusableComponents.RetrieveSelectors(System.String)">
+            <summary>
+            Retrieves ui selectors 
+            </summary>
+            <param name="fileName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Ex_haft.GenericComponents.ReusableComponents.GetUISelector(System.String)">
+            <summary>
+            Retrieves ui selectors for crash details
+            </summary>
+            <param name="fileUniqueName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Ex_haft.GenericComponents.ReusableComponents.GetCrashSeverity(System.String)">
+            <summary>
+            Retrieves ui selectors for crash details
+            </summary>
+            <param name="fileName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Ex_haft.GenericComponents.ReusableComponents.PerformActionBasedOnType(OpenQA.Selenium.IWebDriver,System.String,System.String,System.String)">
+            <summary>
+            Perform Action Based on Input Type
+            </summary>
+            <param name="driver"></param>
+            <param name="type"></param>
+            <param name="uiSelector"></param>
+            <param name="testInput"></param>
+        </member>
+        <member name="M:Ex_haft.GenericComponents.ReusableComponents.RetrieveReportAction(System.String)">
+            <summary>
+            Retrieve Report Action
+            </summary>
+            <param name="type"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Ex_haft.GenericComponents.ReusableComponents.GenerateARFSelectorFiles(System.Collections.Generic.List{Ex_haft.TestDataClasses.RetrieveMasterData},System.Collections.Generic.List{Ex_haft.TestDataClasses.PostData},Newtonsoft.Json.Linq.JObject)">
+            <summary>
+            Generate ARF Selector Files
+            </summary>
+            <param name="masterDataSelectors"></param>
+            <param name="selectors"></param>
+            <param name="jObjects"></param>
+        </member>
+        <member name="M:Ex_haft.GenericComponents.ReusableComponents.RetrieveMasterData(System.String)">
+            <summary>
+            To retrieve testdata array input in json array format for the input file specified
+            </summary>
+            <param name="fileName">Input testdata file name</param>
+        </member>
+        <member name="M:Ex_haft.GenericComponents.ReusableComponents.RetrieveMasterDataSelectors(System.String)">
+            <summary>
+            Retrieves ui selectors 
+            </summary>
+            <param name="fileName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Ex_haft.GenericComponents.ReusableComponents.GetNumber(System.String)">
+            <summary>
+            Retrieves number from a string 
+            </summary>
+            <param name="Text"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Ex_haft.GenericComponents.ReusableComponents.SelectCounterMeasureCategory(OpenQA.Selenium.IWebDriver,System.String,System.String,System.String,System.String)">
+            <summary>
+            Select Counter Measure Category
+            </summary>
+            <param name="driver"></param>
+            <param name="by"></param>
+            <param name="downArrowSelector"></param>
+            <param name="inputText"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Ex_haft.GenericComponents.ReusableComponents.SelectCheckBoxValue(OpenQA.Selenium.IWebDriver,System.String,System.String,System.String,System.String)">
+            <summary>
+            Select checkbox option based on inputValue specified
+            </summary>
+            <param name="driver"></param>
+            <param name="by"></param>
+            <param name="selector1"></param>
+            <param name="selector2"></param>
+            <param name="inputValue"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Ex_haft.GenericComponents.ReusableComponents.FindElementIndex(OpenQA.Selenium.IWebDriver,System.String,System.String,System.String,System.String)">
+            <summary>
+            Find index of the element with value specified as inputValue
+            </summary>
+            <param name="driver"></param>
+            <param name="by"></param>
+            <param name="selector1"></param>
+            <param name="selector2"></param>
+            <param name="inputValue"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Ex_haft.GenericComponents.ReusableComponents.RetrieveAndContainsText(OpenQA.Selenium.IWebDriver,System.String,System.String,System.String)">
+            <summary>
+            Retrieve text from selector specified and check whether input text is contained in the retrieved text
+            </summary>
+            <param name="driver"></param>
+            <param name="By"></param>
+            <param name="selector"></param>
+            <param name="inputText"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Ex_haft.GenericComponents.ReusableComponents.CheckFileDownloaded(System.String)">
+            <summary>
+            Check if file is downloaded
+            </summary>
+            <param name="filename"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Ex_haft.GenericComponents.ReusableComponents.RetrieveFileName">
+            <summary>
+            Retrieves File Name
+            </summary>
+            <param name="Text"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Ex_haft.GenericComponents.ReusableComponents.ReadExcelFile(System.String)">
+            <summary>
+            Reads the excel file.
+            </summary>
+            <param name="fileName">Name of the file.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ex_haft.GenericComponents.ReusableComponents.ToUnixTimeStamp(System.DateTime)">
+            <summary>
+            To the UNIX time stamp.
+            </summary>
+            <param name="dateTimeUtc">The date time UTC.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ex_haft.GenericComponents.ReusableComponents.FindIfElementExists(OpenQA.Selenium.IWebDriver,System.String,System.String)">
+            <summary>
+            Finds if element exists.
+            </summary>
+            <param name="driver">The driver.</param>
+            <param name="by">The by.</param>
+            <param name="selector">The selector.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ex_haft.GenericComponents.ReusableComponents.CheckElementVisible(OpenQA.Selenium.IWebDriver,System.String,System.String)">
+            <summary>
+            Wait until element visible
+            </summary>
+            <param name="driver"></param>
+            <param name="by"></param>
+            <param name="selector"></param>
+        </member>
+        <member name="M:Ex_haft.GenericComponents.ReusableComponents.SelectValueByText(OpenQA.Selenium.IWebDriver,System.String,System.String,System.String)">
+            <summary>
+            Find select element and retrieve value preselected in select box
+            </summary>
+            <param name="driver"></param>
+            <param name="by"></param>
+            <param name="selector"></param>
+        </member>
+        <member name="M:Ex_haft.GenericComponents.ReusableComponents.RetrieveValueFromSelectBox(OpenQA.Selenium.IWebDriver,System.String,System.String)">
+            <summary>
+            Find select element and retrieve value preselected in select box
+            </summary>
+            <param name="driver"></param>
+            <param name="by"></param>
+            <param name="selector"></param>
+        </member>
+        <member name="M:Ex_haft.GenericComponents.ReusableComponents.RetrieveAttributeValue(OpenQA.Selenium.IWebDriver,System.String,System.String,System.String)">
+            <summary>
+            Find element and retrieve value of the attribute specified
+            </summary>
+            <param name="driver"></param>
+            <param name="by"></param>
+            <param name="selector"></param>
+        </member>
+        <member name="M:Ex_haft.Utilities.CaptureScreenshot.TakeSingleSnapShot(OpenQA.Selenium.IWebDriver,System.String)">
+            <summary>
+            Take screenshot of current browser window
+            </summary>
+            <param name="driver"></param>
+            <param name="fileName"></param>
+        </member>
+        <member name="M:Ex_haft.Utilities.Constant.SetConfig(System.String)">
+            <summary>
+            Sets values from configFile into variables
+            </summary>
+            <param name="file"></param>
+        </member>
+        <member name="M:Ex_haft.Utilities.Reports.GenerateReport.GetReportFile(System.String)">
+            <summary>
+            Get Report File
+            </summary>
+            <param name="fileUniqueName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Ex_haft.Utilities.Reports.GenerateReport.WriteResultToHtml(System.Collections.Generic.List{Ex_haft.Utilities.Reports.TestReportSteps},System.String,System.String)">
+            <summary>
+            Generates Report in HTML Format
+            </summary>
+            <param name="listItems"></param>
+            <param name="scriptName"></param>
+            <param name="testObjective"></param>
+        </member>
+        <member name="M:Ex_haft.Utilities.Reports.GenerateReport.WriteToFile(System.String,System.String)">
+            <summary>
+            Writes Result to File
+            </summary>
+            <param name="fileContent"></param>
+            <param name="fileName"></param>
+        </member>
+        <member name="M:Ex_haft.Utilities.Reports.GenerateReport.WriteTestLog(System.String,System.String,System.String,System.String)">
+            <summary>
+            Generates Test Log
+            </summary>
+            <param name="apiName"></param>
+            <param name="input"></param>
+            <param name="output"></param>
+            <param name="requestType"></param>
+        </member>
+        <member name="M:Ex_haft.Utilities.Reports.GenerateReport.GetAbsoluteFilePath(System.String)">
+            <summary>
+            Retrieves Absolute Path of an File 
+            </summary>
+            <param name="fileOrDirectoryName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Ex_haft.Utilities.Reports.GenerateReport.GetTimestamp(System.DateTime)">
+            <summary>
+            Retrieves TimeStamp Value
+            </summary>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="F:Ex_haft.Utilities.Reports.Report.failedSteps">
+            Generate html report
+            @param items - report steps
+            @param filepath - array of screenshot path
+            @param getCurrentDateTime
+            @param getCurrentTime
+            @param count - 0 append to single report , else multiple report file
+        </member>
+        <member name="M:Ex_haft.Utilities.Reports.Report.WriteToFile(System.String,System.String)">
+            Write html report to file
+        </member>
+        <member name="M:Ex_haft.Utilities.Reports.TestReport.#ctor(System.Collections.Generic.List{Ex_haft.Utilities.Reports.TestReportSteps})">
+            Intialize test report steps
+        </member>
+        <member name="M:Ex_haft.Utilities.Reports.TestReport.GetTestReportSteps">
+            Returns test report steps
+        </member>
+        <member name="M:Ex_haft.Utilities.Reports.TestReportSteps.GetTestObjective">
+            Retrieve test objective 
+        </member>
+        <member name="M:Ex_haft.Utilities.Reports.TestReportSteps.SetTestObjective(System.String)">
+            Set test objective
+        </member>
+        <member name="M:Ex_haft.Utilities.Reports.TestReportSteps.GetStepName">
+            Retrieve step name
+        </member>
+        <member name="M:Ex_haft.Utilities.Reports.TestReportSteps.SetStepName(System.String)">
+            Set step name
+        </member>
+        <member name="M:Ex_haft.Utilities.Reports.TestReportSteps.GetStepDescription">
+            Retrieve step description
+        </member>
+        <member name="M:Ex_haft.Utilities.Reports.TestReportSteps.SetStepDescription(System.String)">
+            Set step description
+        </member>
+        <member name="M:Ex_haft.Utilities.Reports.TestReportSteps.GetExpectedResult">
+            Retrieve expected result
+        </member>
+        <member name="M:Ex_haft.Utilities.Reports.TestReportSteps.SetExpectedResult(System.String)">
+            Set expected result
+        </member>
+        <member name="M:Ex_haft.Utilities.Reports.TestReportSteps.GetActualResultPass">
+            Retrieve actual result for test pass 
+        </member>
+        <member name="M:Ex_haft.Utilities.Reports.TestReportSteps.SetActualResultPass(System.String)">
+            Set actual result for test pass 
+        </member>
+        <member name="M:Ex_haft.Utilities.Reports.TestReportSteps.GetActualResultFail">
+            Generate actual result for test fail 
+        </member>
+        <member name="M:Ex_haft.Utilities.Reports.TestReportSteps.SetActualResultFail(System.String)">
+            Set actual result for test fail
+        </member>
+        <member name="M:Ex_haft.Utilities.Reports.TestReportSteps.GetResponseTime">
+            <summary>
+            Get the response time
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Ex_haft.Utilities.Reports.TestReportSteps.SetReponseTime(System.Double)">
+            <summary>
+            Sets response time
+            </summary>
+            <param name="reponseTime"></param>
+        </member>
+    </members>
+</doc>
